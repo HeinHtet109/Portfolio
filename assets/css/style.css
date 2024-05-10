@@ -1,7 +1,7 @@
 /*
-  Theme Name: Bentofolio - Bootstrap Personal Portfolio Template
+  Theme Name: HHS - Portfolio
   Support: marveltheme@gmail.com
-  Description: Bentofolio - Bootstrap Personal Portfolio Template
+  Description: HHS - Portfolio
   Version: 1.0
 */
 
@@ -33,13 +33,16 @@
 :root {
 	--font-family: "Bricolage Grotesque", sans-serif;
 	--primary: #4770FF;
+	--primary-light: #009DC5;
 	--black: #1A1F2C;
 	--light-black: #576076;
 	--white: #ffffff;
+	--hover-primary-light:#1d8da8;
 	--dark-theme-bg: #000;
 	--dark-theme-black: #0E1018;
 	--dark-theme-white: #f0f2f5;
 	--dark-theme-light-white: rgba(240, 242, 245, 0.7);
+	--dark-theme-light-primary: #009DC5;
 	--paragraph: #616670;
 	--background: #F0F2F5;
 	--font-size: 16px;
@@ -104,6 +107,10 @@ button:focus {
 	text-decoration: none;
 	outline: none;
 	box-shadow: none;
+}
+
+.text-justify{
+	text-align: justify;
 }
 
 
@@ -218,17 +225,17 @@ p {
 .card-title .link-btn {
 	font-size: 16px;
 	font-weight: 400;
-	color: var(--primary);
+	color: var(--primary-light);
 	line-height: 1.5em;
 	border-bottom: 1px solid var(--border);
 }
 
 .card-title .link-btn:hover {
-	border-color: var(--primary);
+	border-color: var(--primary-light);
 }
 
 .card-title .link-btn .icon {
-	stroke: var(--primary);
+	stroke: var(--primary-light);
 }
 
 /*=============================
@@ -277,7 +284,7 @@ p {
 }
 
 .header-area .container .navbar-brand span.primary {
-	color: var(--primary);
+	color: var(--primary-light);
 }
 
 .header-area .navbar {
@@ -365,10 +372,10 @@ p {
 	background-color: var(--background);
 }
 
-.header-area .header-right-info .lets-talk-btn {
+.header-area .header-right-info .github-btn {
 	background-color: var(--black);
 	border-radius: 8px;
-	padding: 16px 24px;
+	padding: 16px 10px;
 	font-size: 16px;
 	font-weight: 600;
 	color: var(--white);
@@ -376,11 +383,11 @@ p {
 	margin-left: 16px;
 }
 
-.header-area .header-right-info .lets-talk-btn:hover {
-	background-color: var(--primary);
+.header-area .header-right-info .github-btn:hover {
+	background-color: var(--primary-light);
 }
 
-.header-area .header-right-info .lets-talk-btn .icon {
+.header-area .header-right-info .github-btn .icon {
 	margin-left: 8px;
 }
 
@@ -466,7 +473,15 @@ p {
 	margin-right: 8px;
 }
 
-.common-button-groups .btn.btn-call:focus {
+.common-button-groups .btn.btn-download{
+	background-color: var(--primary-light);
+}
+
+.common-button-groups .btn.btn-download:hover{
+	background-color: var(--hover-primary-light);
+}
+
+.common-button-groups .btn.btn-download:focus {
 	color: var(--white);
 	border-color: transparent;
 }
@@ -548,6 +563,9 @@ p {
 	border-radius: 8px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
+	background-position: center;
+	background-size: contain;
+	height: 220px;
 }
 
 .card-projects .project-item .image .info {
@@ -661,8 +679,7 @@ p {
 }
 
 .work-experiance-card .work-experiance-slider li .info .icon {
-	border-radius: 8px;
-	width: 32px;
+	border-radius: 8px;	
 	height: 32px;
 	background-color: var(--background);
 	display: flex;
@@ -677,8 +694,12 @@ p {
 .work-experiance-card .work-experiance-slider li .info .text .title {
 	font-size: 16px;
 	font-weight: 600;
-	color: var(--black);
+	color: var(--primary-light);
 	line-height: 1.5em;
+}
+
+.work-experiance-card .work-experiance-slider li .info .text .title:hover{
+	color: var(--hover-primary-light);
 }
 
 .work-experiance-card .work-experiance-slider li .info .text .subtitle {
@@ -780,17 +801,17 @@ p {
 .lets-talk-together-card .link-btn {
 	font-size: 16px;
 	font-weight: 500;
-	color: var(--primary);
+	color: var(--primary-light);
 	margin-top: 14px;
 	border-bottom: 1px solid var(--border);
 }
 
 .lets-talk-together-card .link-btn:hover {
-	border-color: var(--primary);
+	border-color: var(--primary-light);
 }
 
 .lets-talk-together-card .link-btn .icon {
-	stroke: var(--primary) !important;
+	stroke: var(--primary-light) !important;
 }
 
 /*=============================
@@ -2100,7 +2121,7 @@ p {
 }
 
 .dark-theme .header-area .container .navbar-brand span .primary {
-	color: var(--primary);
+	color: var(--primary-light);
 }
 
 .dark-theme .header-area .navbar-info .nav-item:hover .nav-link,
@@ -2115,12 +2136,12 @@ p {
 	fill: none;
 }
 
-.dark-theme .header-area .header-right-info .lets-talk-btn {
+.dark-theme .header-area .header-right-info .github-btn {
 	background-color: var(--dark-theme-black);
 }
 
-.dark-theme .header-area .header-right-info .lets-talk-btn:hover {
-	background-color: var(--primary);
+.dark-theme .header-area .header-right-info .github-btn:hover {
+	background-color: var(--primary-light);
 }
 
 .dark-theme .header-area .header-right-info .theme-control-btn span:hover {
@@ -2180,11 +2201,11 @@ p {
 }
 
 .dark-theme .card-title .link-btn {
-	border-color: var(--light-black);
+	border-color: var(--primary-light);
 }
 
 .dark-theme .card-title .link-btn:hover {
-	border-color: var(--primary);
+	border-color: var(--primary-light);
 }
 
 .dark-theme .card-projects .project-item .image {
@@ -2227,7 +2248,7 @@ p {
 }
 
 .dark-theme .work-experiance-card .work-experiance-slider li .info .text .title {
-	color: var(--dark-theme-light-white);
+	color: var(--dark-theme-light-primary);
 }
 
 .dark-theme .footer-area .text p {
