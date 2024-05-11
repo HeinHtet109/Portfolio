@@ -106,44 +106,4 @@
 		},]
 	});
 
-	// Email Sender JS
-	function sendMail(name, email, subject,budget, message) {
-		const myHeaders = new Headers();
-		myHeaders.append("Content-Type", "application/json");
-		myHeaders.set('Authorization', 'Basic ' + btoa('333ea53915a7651eb4bde84f7f592f8d' + ":" + 'f4e670f5b0e0ad7d6bce34fd36e9ddd9'));
-
-		const data = JSON.stringify({
-			"Messages": [{
-				"From": { "Email": email, "Name": name },
-				"To": [{ "Email": "hein.htetsan37871@gmail.com", "Name": "Hein Htet" }],
-				"Subject": subject,
-				"Budget": budget,
-				"TextPart": message
-			}]
-		});
-
-		const requestOptions = {
-			method: 'POST',
-			headers: myHeaders,
-			body: data,
-		};
-
-		fetch("https://api.mailjet.com/v3.1/send", requestOptions)
-			.then(response => response.text())
-			.then(result => console.log(result))
-			.catch(error => console.log('error', error));
-	}
-
-	$("#contact-form").on("submit",function(e){
-		e.preventDefault();
-
-		let name = $(this).find('input[name=name]').val();
-		let email = $(this).find('input[name=email]').val();
-		let subject = $(this).find('input[name=subject]').val();
-		let budget = $(this).find('select[name=budget]').val();
-		let message = $(this).find('input[name=message]').val();
-
-		sendMail(name,email,subject,budget,message);
-	})
-
 })(jQuery);

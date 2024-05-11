@@ -423,6 +423,11 @@ p {
 	padding: 24px;
 }
 
+.macos, .github, .axure, .aws{
+	fill: #000000;
+}
+
+
 .profile-card .image {
 	background-color: var(--background);
 	border-radius: 8px;
@@ -740,6 +745,13 @@ p {
 	background-color: var(--background);
 	padding: 16px 16px 24px 16px;
 	border-radius: 16px;
+	position: relative;
+}
+
+.services-item .expert{
+	position: absolute;
+	top: 8%;
+	right: 15%;
 }
 
 .services-item .image {
@@ -1395,7 +1407,7 @@ p {
 ===============================*/
 
 .services {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	margin-top: 60px;
 }
 
@@ -2598,4 +2610,8 @@ p {
 .dark-theme .portfolio-details-area .prev-and-next-btn .btn:hover {
 	background-color: var(--primary);
 	color: var(--white);
+}
+
+.dark-theme .macos,.dark-theme .github,.dark-theme .axure, .dark-theme .aws{
+	fill: #ffffff;
 }
