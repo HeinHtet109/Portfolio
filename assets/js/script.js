@@ -66,6 +66,14 @@
 		},
 	});
 
+	$(".parent-container-3").magnificPopup({
+		delegate: ".gallery-popup",
+		type: "image",
+		gallery: {
+			enabled: true,
+		},
+	});
+
 	// Client feedback slider js
 	$(".client-feedback-slider").slick({
 		slidesToShow: 2,

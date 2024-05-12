@@ -865,7 +865,14 @@ p {
 }
 
 .content-box-card .top-info .main-title span {
-	color: var(--primary);
+	color: var(--primary-light);
+}
+
+.content-box-card .top-info .text-normal p{
+	font-size: medium!important;
+	font-weight: lighter!important;
+	color: var(--dark-theme-black)!important;
+	text-align: justify;
 }
 
 .content-box-card .top-info p {
@@ -888,7 +895,7 @@ p {
 .content-box-card .available-btn span {
 	font-size: 18px;
 	font-weight: 500;
-	color: var(--primary);
+	color: var(--primary-light);
 	background-color: var(--background);
 	padding: 8px 16px 8px 16px;
 	border-radius: 8px;
@@ -910,7 +917,7 @@ p {
 	transform: translate(-50%, -50%) scale(0);
 	width: 100%;
 	height: 100%;
-	background-color: rgba(71, 112, 255, 0.3);
+	background-color: var(--primary-light);
 	border-radius: 50%;
 	content: "";
 	animation: live 1s ease-in-out infinite;
@@ -985,7 +992,7 @@ p {
 .content-box-card .counter-area .circle-text .arrow-down {
 	width: 70px;
 	height: 70px;
-	background-color: var(--primary);
+	background-color: var(--primary-light);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -1523,12 +1530,15 @@ p {
 	background-color: var(--background);
 	border-radius: 16px;
 	position: relative;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
 }
 
 .portfolio-area .portfolio-item .image img {
 	border-radius: 8px;
 	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;	
 }
 
 .portfolio-area .portfolio-item .image .full-image-preview {
@@ -1575,11 +1585,7 @@ p {
 	line-height: 1.3em;
 	border-bottom: 1px solid transparent;
 	margin-bottom: 2px;
-}
-
-.portfolio-area .portfolio-item .text .info .title:hover {
-	color: var(--primary);
-	border-color: var(--primary);
+	cursor: pointer;
 }
 
 .portfolio-area .portfolio-item .text .info .subtitle {
@@ -1587,6 +1593,7 @@ p {
 	font-weight: 400;
 	line-height: 1.5em;
 	color: var(--light-black);
+	text-align: justify;
 }
 
 .portfolio-area .portfolio-item .text .visite-btn a {
@@ -1621,7 +1628,12 @@ p {
 	gap: 8px;
 }
 
-.pagination ul li button {
+.bg-primary-light{
+	background-color: var(--primary-light);
+	font-size: 11px;
+}
+
+.pagination ul li button, .pagination ul li a {
 	width: 36px;
 	height: 36px;
 	border: 1px solid var(--border);
@@ -1635,7 +1647,7 @@ p {
 	align-items: center;
 }
 
-.pagination ul li button:hover {
+.pagination ul li button:hover , .pagination ul li a:hover {
 	border-color: var(--primary);
 	color: var(--primary);
 }
@@ -1664,32 +1676,32 @@ p {
 	display: none;
 }
 
-.pagination ul li button .icon {
+.pagination ul li button .icon, .pagination ul li a .icon {
 	width: 16px;
 	height: 16px;
 	stroke: var(--light-black);
 }
 
-.pagination ul li button:hover .icon {
+.pagination ul li button:hover .icon, .pagination ul li a:hover .icon {
 	stroke: var(--primary);
 }
 
-.pagination ul li button:hover .next-page {
+.pagination ul li button:hover .next-page, .pagination ul li a:hover .next-page {
 	display: block;
 }
 
-.pagination ul li button:hover .dots {
+.pagination ul li button:hover .dots, .pagination ul li a:hover .dots {
 	display: none;
 }
 
-.pagination ul li button .icon-arrow-right {
+.pagination ul li button .icon-arrow-right, .pagination ul li a .icon-arrow-right {
 	width: 20px;
 	height: 20px;
 	position: relative;
 	top: -2px;
 }
 
-.pagination ul li button:hover .next-page-number {
+.pagination ul li button:hover .next-page-number, .pagination ul li a:hover .next-page-number {
 	display: block;
 }
 
@@ -2020,7 +2032,7 @@ p {
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--white);
-	background-color: var(--primary);
+	background-color: var(--primary-light);
 	padding: 16px 24px;
 	width: 100%;
 	border: 0;
@@ -2028,7 +2040,7 @@ p {
 }
 
 .leave-comments-area .comments-box .submit-btn:hover {
-	background-color: #2563EB;
+	background-color: var(--hover-primary-light);
 }
 
 .leave-comments-area .comments-box .submit-btn .icon {
@@ -2291,8 +2303,8 @@ p {
 	color: var(--dark-theme-white);
 }
 
-.dark-theme .content-box-card .top-info p {
-	color: var(--dark-theme-light-white);
+.dark-theme .content-box-card .top-info .text-normal p {
+	color: var(--dark-theme-white)!important;
 }
 
 .dark-theme .content-box-card .top-info p {
@@ -2470,9 +2482,6 @@ p {
 	color: var(--dark-theme-light-white);
 }
 
-.dark-theme .portfolio-area .portfolio-item .text .info .title:hover {
-	color: var(--primary);
-}
 
 .dark-theme .portfolio-area .portfolio-item .text .visite-btn a {
 	color: var(--dark-theme-light-white);
@@ -2482,13 +2491,13 @@ p {
 	color: var(--primary);
 }
 
-.dark-theme .pagination ul li button {
+.dark-theme .pagination ul li button,.dark-theme .pagination ul li a {
 	border-color: var(--black);
 	color: var(--light-black);
 	background-color: #000;
 }
 
-.dark-theme .pagination ul li button:hover {
+.dark-theme .pagination ul li button:hover,.dark-theme .pagination ul li a:hover {
 	border-color: var(--primary);
 	color: var(--primary);
 }
@@ -2614,4 +2623,8 @@ p {
 
 .dark-theme .macos,.dark-theme .github,.dark-theme .axure, .dark-theme .aws{
 	fill: #ffffff;
+}
+
+.dark-theme .main-list li{
+	color: var(--white);
 }
