@@ -479,4 +479,23 @@
     font-size: 18px;
     height: 64px;
   }
+
+  .common-button-groups .btn {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:400px) {
+  .common-button-groups .btn {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width:330px) {
+  .common-button-groups .btn {
+    padding: 10px 6px;
+    font-size: 11px;
+  }
 }

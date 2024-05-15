@@ -458,6 +458,7 @@ p {
 .common-button-groups {
 	margin-top: 24px;
 	display: flex;
+	justify-content: space-around;
 }
 
 .common-button-groups .btn {
@@ -467,7 +468,9 @@ p {
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--white);
-	line-height: 1.5em;
+	line-height: 1.5em;	
+	display: block;
+	width: 100%;
 	margin-right: 8px;
 }
 
@@ -481,6 +484,9 @@ p {
 
 .common-button-groups .btn.btn-download{
 	background-color: var(--primary-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .common-button-groups .btn.btn-download:hover{
