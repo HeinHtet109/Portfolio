@@ -457,6 +457,7 @@ p {
 
 .common-button-groups {
 	margin-top: 24px;
+	display: flex;
 }
 
 .common-button-groups .btn {

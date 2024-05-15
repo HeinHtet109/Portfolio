@@ -401,18 +401,14 @@
 }
 
 @media (max-width:575.98px) {
-  .common-button-groups .btn.btn-copy {
-    margin-top: 8px;
-  }
-
   .work-experiance-card .work-experiance-slider li {
     flex-direction: column;
   }
 
   .card-title {
     gap: 6px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
   }
 
   .services-item {
