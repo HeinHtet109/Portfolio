@@ -755,12 +755,6 @@ p {
 	position: relative;
 }
 
-.services-item .expert{
-	position: absolute;
-	top: 8%;
-	right: 15%;
-}
-
 .services-item .image {
 	background-color: var(--white);
 	border-radius: 8px;
