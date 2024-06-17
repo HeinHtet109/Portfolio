@@ -3,6 +3,7 @@
 
 	// Theme color control js
 	$(document).ready(function () {
+		localStorage.setItem('darkMode', true);
 		const isDarkMode = localStorage.getItem('darkMode') === 'true';
 		$('body').toggleClass('dark-theme', isDarkMode);
 
